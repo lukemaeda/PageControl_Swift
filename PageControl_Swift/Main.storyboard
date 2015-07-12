@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wbg-d2-yRF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8sY-tU-k7j">
+            <objects>
+                <viewController id="wbg-d2-yRF" customClass="ViewController" customModule="PageControl_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvw-MB-KZc"/>
+                        <viewControllerLayoutGuide type="bottom" id="H21-DB-725"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hs-PP-OxY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r98-mr-Ljf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="531"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="531" id="NCr-ve-rVP"/>
+                                    <constraint firstAttribute="width" constant="320" id="fHe-mS-6X4"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="wbg-d2-yRF" id="7p4-GR-lmc"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nji-PO-hgE">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <color key="backgroundColor" red="0.58232758179999999" green="1" blue="0.70695921449999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r98-mr-Ljf" firstAttribute="trailing" secondItem="Nji-PO-hgE" secondAttribute="trailing" id="4NB-dR-att"/>
+                            <constraint firstItem="r98-mr-Ljf" firstAttribute="leading" secondItem="2hs-PP-OxY" secondAttribute="leading" id="H5M-iw-xyw"/>
+                            <constraint firstItem="r98-mr-Ljf" firstAttribute="top" secondItem="2hs-PP-OxY" secondAttribute="top" id="R29-OW-NT7"/>
+                            <constraint firstItem="r98-mr-Ljf" firstAttribute="leading" secondItem="Nji-PO-hgE" secondAttribute="leading" id="UK2-8m-c7t"/>
+                            <constraint firstItem="Nji-PO-hgE" firstAttribute="top" secondItem="r98-mr-Ljf" secondAttribute="bottom" id="kF3-ch-2nE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageControl" destination="Nji-PO-hgE" id="bLr-sn-jPh"/>
+                        <outlet property="scrollView" destination="r98-mr-Ljf" id="ji9-oo-f0t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9Z-Qi-3IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2827.5" y="-26.408450704225352"/>
+        </scene>
+    </scenes>
+</document>
